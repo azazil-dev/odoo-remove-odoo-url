@@ -4,7 +4,7 @@
 
 {
     'name': "Odoo URL Replacement",
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Extra Tools',
     'summary': "Replace /odoo backend URL with your own custom brand slug for white-labeling",
     'description': """
@@ -14,12 +14,12 @@ Replace the `/odoo` segment in backend URLs with your custom brand name.
 For example, `https://yourdomain.com/odoo/action-250` becomes `https://yourdomain.com/brand/action-250`.
 
 Key Features:
-- Seamless white-labeling for Odoo 18 backend.
+- Seamless white-labeling for Odoo 19 backend.
 - Easy toggle and brand slug configuration in General Settings.
 - Automatic redirects from `/odoo` and `/web` to branded URLs.
 - Zero server restart needed; changes apply immediately on save.
 - Completely safe default: reverts to 100% native Odoo behavior when disabled.
-- Works cleanly on both Odoo 18 Community Edition and Enterprise.
+- Works cleanly on both Odoo 19 Community Edition and Enterprise.
     """,
     'author': "Arif N Ramadhan",
     'website': "https://www.niits.id",

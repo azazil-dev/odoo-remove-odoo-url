@@ -1,7 +1,7 @@
 # Odoo URL Replacement (odoo_url_replacement)
 
 **Technical Name:** `odoo_url_replacement`  
-**Compatibility:** Odoo 18.0 Community & Enterprise  
+**Compatibility:** Odoo 19.0 Community & Enterprise  
 **Author:** Arif N Ramadhan &bull; [Niits Inovasi Teknologi](https://www.niits.id)  
 **License:** [OPL-1 (Odoo Proprietary License v1.0)](https://www.odoo.com/documentation/18.0/legal/licenses.html)  
 **Price:** Free  
@@ -10,7 +10,7 @@
 
 ## Overview
 
-In Odoo 18, all backend URLs are prefixed by `/odoo` (e.g. `https://yourdomain.com/odoo/action-250`).
+In Odoo 19, all backend URLs are prefixed by `/odoo` (e.g. `https://yourdomain.com/odoo/action-250`).
 
 **Odoo URL Replacement** allows administrators to replace the default `/odoo` segment with their own custom brand name (such as `https://yourdomain.com/brand/action-250`) for a fully white-labeled ERP experience.
 
@@ -44,7 +44,7 @@ In Odoo 18, all backend URLs are prefixed by `/odoo` (e.g. `https://yourdomain.c
 
 ## URL Mapping Reference
 
-| Default Odoo 18 URL | With Module (e.g. `brand = mycompany`) | Description |
+| Default Odoo 19 URL | With Module (e.g. `brand = mycompany`) | Description |
 |---|---|---|
 | `/odoo` | `/mycompany` | Backend dashboard |
 | `/odoo/action-250` | `/mycompany/action-250` | Specific action / view |
