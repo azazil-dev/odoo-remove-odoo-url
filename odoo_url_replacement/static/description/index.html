@@ -1,5 +1,10 @@
 <div class="container my-4" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1E293B;">
 
+    <!-- TOP BANNER -->
+    <div class="text-center mb-4">
+        <img src="banner.png" class="img-fluid rounded-4 shadow-sm" alt="Odoo URL Replacement Banner" style="width: 100%; max-height: 480px; object-fit: cover;"/>
+    </div>
+
     <!-- HERO HEADER SECTION -->
     <div class="row align-items-center mb-4 p-4 rounded-4 shadow-sm" style="background: #F8FAFC; border-left: 6px solid #714B67; border: 1px solid #E2E8F0;">
         <div class="col-md-2 text-center mb-3 mb-md-0">
@@ -9,7 +14,7 @@
         </div>
         <div class="col-md-10">
             <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
-                <h2 class="mb-0 fw-bold" style="color: #212529;">Remove Odoo URL</h2>
+                <h2 class="mb-0 fw-bold" style="color: #212529;">Odoo URL Replacement</h2>
                 <span class="badge rounded-pill" style="background-color: #714B67; color: #FFFFFF; font-size: 0.8rem; padding: 6px 12px;">
                     <i class="fa fa-bolt me-1"></i>Odoo 18 CE &amp; EE
                 </span>
@@ -26,7 +31,7 @@
             <p class="mb-0 fs-6" style="line-height: 1.6; color: #334155;">
                 Replace the default <code>/odoo</code> segment in backend URLs with your custom brand name.
                 For instance, <code>https://yourdomain.com/odoo/action-250</code> becomes <code>https://yourdomain.com/brand/action-250</code>.
-                Fully configured via General Settings with immediate effect, no server restart required!
+                Fully configured via General Settings with immediate effect, no server restart or reverse proxy rewrite required!
             </p>
         </div>
     </div>
@@ -37,17 +42,17 @@
         <p class="text-center text-muted small mb-4">See how the backend URL is cleanly white-labeled to match your company's identity.</p>
         <div class="row g-4 align-items-center">
             <div class="col-md-6 text-center">
-                <div class="p-3 rounded-3 border" style="background: #FFF5F5; border-color: #FED7D7 !important;">
+                <div class="p-3 rounded-3 border h-100" style="background: #FFF5F5; border-color: #FED7D7 !important;">
                     <span class="badge bg-danger mb-2 px-3 py-2 fs-7"><i class="fa fa-times-circle me-1"></i>Before (Default Odoo 18 URL)</span>
-                    <p class="text-muted small mb-2">Notice the default <code>/odoo/...</code> prefix in the address bar:</p>
-                    <img src="before.png" class="img-fluid rounded border shadow-sm" alt="Default Odoo URL" style="max-height: 260px; object-fit: contain;"/>
+                    <p class="text-muted small mb-2">Notice the default <code>/odoo/...</code> prefix in the browser address bar:</p>
+                    <img src="before.png" class="img-fluid rounded border shadow-sm" alt="Default Odoo URL" style="max-height: 280px; object-fit: contain; width: 100%;"/>
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <div class="p-3 rounded-3 border" style="background: #F0FDF4; border-color: #BBF7D0 !important;">
+                <div class="p-3 rounded-3 border h-100" style="background: #F0FDF4; border-color: #BBF7D0 !important;">
                     <span class="badge bg-success mb-2 px-3 py-2 fs-7"><i class="fa fa-check-circle me-1"></i>After (Custom Branded URL)</span>
-                    <p class="text-muted small mb-2">Replaced cleanly with your custom brand name in real time:</p>
-                    <img src="after.png" class="img-fluid rounded border shadow-sm" alt="Branded URL" style="max-height: 260px; object-fit: contain;"/>
+                    <p class="text-muted small mb-2">Replaced cleanly with your custom brand slug in real time:</p>
+                    <img src="after.png" class="img-fluid rounded border shadow-sm" alt="Branded URL" style="max-height: 280px; object-fit: contain; width: 100%;"/>
                 </div>
             </div>
         </div>
@@ -56,11 +61,11 @@
     <!-- CONFIGURATION SCREENSHOT -->
     <div class="mb-5 p-4 bg-white rounded-4 border shadow-sm text-center">
         <h4 class="fw-bold mb-2" style="color: #212529;">Seamless General Settings Integration</h4>
-        <p class="text-muted small mb-3">Enable or disable URL replacement and set your brand slug directly from Settings &rarr; General Settings.</p>
+        <p class="text-muted small mb-3">Enable or disable URL replacement and set your custom brand slug directly from Settings &rarr; General Settings.</p>
         <div class="d-inline-block p-2 rounded-3 border bg-light shadow-sm" style="max-width: 900px; width: 100%;">
             <img src="setting.png" class="img-fluid rounded border" alt="General Settings Configuration" style="width: 100%;"/>
         </div>
-        <p class="text-muted small mt-2 mb-0">Changes apply immediately on Save &mdash; no server restart or reverse proxy configuration needed.</p>
+        <p class="text-muted small mt-2 mb-0">Changes apply immediately on Save &mdash; no server restart or web server rewrites needed.</p>
     </div>
 
     <!-- KEY FEATURES -->
@@ -93,14 +98,14 @@
                 <div class="p-3 bg-light rounded-3 text-center h-100">
                     <span class="badge bg-primary rounded-pill mb-2">1</span>
                     <h6 class="fw-bold mb-1">Install Module</h6>
-                    <p class="text-muted small mb-0">Install cleanly with only <code>web</code> and <code>base_setup</code> dependencies.</p>
+                    <p class="text-muted small mb-0">Install cleanly with only standard <code>web</code> and <code>base_setup</code> dependencies.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="p-3 bg-light rounded-3 text-center h-100">
                     <span class="badge bg-primary rounded-pill mb-2">2</span>
                     <h6 class="fw-bold mb-1">Open Settings</h6>
-                    <p class="text-muted small mb-0">Navigate to <strong>Settings &rarr; General Settings</strong> to find the URL Replacement block.</p>
+                    <p class="text-muted small mb-0">Navigate to <strong>Settings &rarr; General Settings</strong> to find the URL Replacement section.</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -126,7 +131,7 @@
         <div class="table-responsive">
             <table class="table table-bordered table-sm mb-0">
                 <tbody>
-                    <tr><th class="w-25 bg-light">Technical Name</th><td><code>remove_odoo_url</code></td></tr>
+                    <tr><th class="w-25 bg-light">Technical Name</th><td><code>odoo_url_replacement</code></td></tr>
                     <tr><th class="bg-light">Compatibility</th><td>Odoo 18.0 Community &amp; Enterprise</td></tr>
                     <tr><th class="bg-light">Dependencies</th><td><code>web</code>, <code>base_setup</code></td></tr>
                     <tr><th class="bg-light">License</th><td>OPL-1 (Free)</td></tr>

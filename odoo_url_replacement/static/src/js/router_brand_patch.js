@@ -9,7 +9,7 @@ import { router } from "@web/core/browser/router";
 import { patch } from "@web/core/utils/patch";
 import { session } from "@web/session";
 
-const brand = session.remove_odoo_url_enabled ? session.remove_odoo_url_brand : null;
+const brand = session.odoo_url_replacement_enabled ? session.odoo_url_replacement_brand : null;
 
 if (brand) {
     const brandPrefix = `/${brand}`;
@@ -47,4 +47,3 @@ if (brand) {
         browser.history.replaceState(browser.history.state, "", newUrl);
     }
 }
-

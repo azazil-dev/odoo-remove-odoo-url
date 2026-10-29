@@ -18,12 +18,12 @@ class ResConfigSettings(models.TransientModel):
 
     url_replacement_enabled = fields.Boolean(
         string="Enable URL Replacement",
-        config_parameter='remove_odoo_url.enabled',
+        config_parameter='odoo_url_replacement.enabled',
         default=False,
     )
     url_replacement_brand_text = fields.Char(
         string="Brand Text",
-        config_parameter='remove_odoo_url.brand_text',
+        config_parameter='odoo_url_replacement.brand_text',
     )
 
     @api.constrains('url_replacement_enabled', 'url_replacement_brand_text')
@@ -65,4 +65,3 @@ class ResConfigSettings(models.TransientModel):
         super().set_values()
         # Invalidate registry cache so ir_http and routing immediately pick up the changes
         self.env.registry.clear_cache()
-

@@ -3,13 +3,13 @@
 # License OPL-1 (Odoo Proprietary License v1.0). See LICENSE file.
 
 {
-    'name': "Remove Odoo URL",
+    'name': "Odoo URL Replacement",
     'version': '18.0.1.0.0',
     'category': 'Extra Tools',
     'summary': "Replace /odoo backend URL with your own custom brand slug for white-labeling",
     'description': """
-Remove Odoo URL (URL Replacement)
-=================================
+Odoo URL Replacement (Remove Odoo URL)
+=====================================
 Replace the `/odoo` segment in backend URLs with your custom brand name.
 For example, `https://yourdomain.com/odoo/action-250` becomes `https://yourdomain.com/brand/action-250`.
 
@@ -37,7 +37,7 @@ Key Features:
     ],
     'assets': {
         'web.assets_backend': [
-            'remove_odoo_url/static/src/js/router_brand_patch.js',
+            'odoo_url_replacement/static/src/js/router_brand_patch.js',
         ],
     },
     'images': [
@@ -46,7 +46,7 @@ Key Features:
         'static/description/before.png',
         'static/description/after.png',
     ],
-    'application': True,
+    'application': False,
     'installable': True,
     'auto_install': False,
     'uninstall_hook': 'uninstall_hook',

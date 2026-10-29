@@ -3,7 +3,6 @@
 # License OPL-1 (Odoo Proprietary License v1.0). See LICENSE file.
 
 import logging
-from urllib.parse import urlencode
 
 from odoo import http
 from odoo.http import request
@@ -35,7 +34,7 @@ class BrandedHome(Home):
                     redirect_url = f"{target_path}?{query_str}" if query_str else target_path
                     return request.redirect(redirect_url, code=302, keep_hash=True)
         except Exception as e:
-            _logger.warning("Error in remove_odoo_url web_client redirect: %s", e)
+            _logger.warning("Error in odoo_url_replacement web_client redirect: %s", e)
 
         return super().web_client(s_action=s_action, **kw)
 
@@ -53,7 +52,6 @@ class BrandedHome(Home):
                 elif redirect.startswith('/odoo/'):
                     redirect = f"/{brand}" + redirect[5:]
         except Exception as e:
-            _logger.warning("Error in remove_odoo_url _login_redirect: %s", e)
+            _logger.warning("Error in odoo_url_replacement _login_redirect: %s", e)
 
         return super()._login_redirect(uid, redirect=redirect)
-

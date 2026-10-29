@@ -12,9 +12,8 @@ def uninstall_hook(env_or_cr, registry=None):
         env = api.Environment(env_or_cr, SUPERUSER_ID, {})
     # Remove config parameters cleanly
     params = env['ir.config_parameter'].sudo().search([
-        ('key', 'in', ['remove_odoo_url.enabled', 'remove_odoo_url.brand_text'])
+        ('key', 'in', ['odoo_url_replacement.enabled', 'odoo_url_replacement.brand_text'])
     ])
     if params:
         params.unlink()
     env.registry.clear_cache()
-

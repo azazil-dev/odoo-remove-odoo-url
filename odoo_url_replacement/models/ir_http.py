@@ -20,12 +20,12 @@ class IrHttp(models.AbstractModel):
         """
         try:
             Param = self.env['ir.config_parameter'].sudo()
-            enabled = Param.get_param('remove_odoo_url.enabled', 'False').strip().lower() in ('1', 'true', 'yes')
-            brand = (Param.get_param('remove_odoo_url.brand_text', '') or '').strip().lower()
+            enabled = Param.get_param('odoo_url_replacement.enabled', 'False').strip().lower() in ('1', 'true', 'yes')
+            brand = (Param.get_param('odoo_url_replacement.brand_text', '') or '').strip().lower()
             if enabled and brand:
                 return True, brand
         except Exception as e:
-            _logger.warning("Error fetching remove_odoo_url configuration: %s", e)
+            _logger.warning("Error fetching odoo_url_replacement configuration: %s", e)
         return False, ''
 
     @classmethod
@@ -45,7 +45,7 @@ class IrHttp(models.AbstractModel):
                     elif path_info.startswith(f"{prefix}/"):
                         path_info = "/odoo" + path_info[len(prefix):]
         except Exception as e:
-            _logger.warning("Error in remove_odoo_url _match interceptor: %s", e)
+            _logger.warning("Error in odoo_url_replacement _match interceptor: %s", e)
 
         # Call standard matching
         try:
@@ -59,9 +59,8 @@ class IrHttp(models.AbstractModel):
         try:
             enabled, brand = self._get_url_replacement_config()
             if enabled and brand:
-                result['remove_odoo_url_enabled'] = True
-                result['remove_odoo_url_brand'] = brand
+                result['odoo_url_replacement_enabled'] = True
+                result['odoo_url_replacement_brand'] = brand
         except Exception as e:
-            _logger.warning("Error adding remove_odoo_url info to session_info: %s", e)
+            _logger.warning("Error adding odoo_url_replacement info to session_info: %s", e)
         return result
-
