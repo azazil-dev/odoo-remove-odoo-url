@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 Arif N Ramadhan (https://www.niits.id)
+    License OPL-1 (Odoo Proprietary License v1.0)
+-->
+<odoo>
+    <record id="res_config_settings_view_form_remove_odoo_url" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.remove_odoo_url</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="General Settings" string="General Settings" name="general_settings">
+                    <block title="URL Replacement Settings" name="url_replacement_settings_container">
+                        <setting id="url_replacement_toggle" help="Replace /odoo backend URL segment with your custom brand name.">
+                            <field name="url_replacement_enabled"/>
+                        </setting>
+                        <setting id="url_replacement_brand" invisible="not url_replacement_enabled" help="Enter custom brand slug (2-32 characters, lowercase letters, numbers, and hyphens).">
+                            <label for="url_replacement_brand_text" string="Brand Text"/>
+                            <div class="content-group">
+                                <field name="url_replacement_brand_text" placeholder="e.g. mycompany"/>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
